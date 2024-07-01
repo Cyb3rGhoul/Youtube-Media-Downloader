@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1>YouTube Downloader</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <form action="/fetch" method="post">
+                        <div class="form-group">
+                            <label for="url">YouTube URL:</label>
+                            <input type="text" id="url" name="url" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="download_type">Download Type:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="audio" name="download_type" value="audio" class="form-check-input" checked>
+                                <label for="audio" class="form-check-label">Audio</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="video" name="download_type" value="video" class="form-check-input">
+                                <label for="video" class="form-check-label">Video</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Fetch Details</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
