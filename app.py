@@ -44,3 +44,6 @@ def download():
         return send_file(download_path, as_attachment=True)
     except Exception as e:
         return f"An error occurred: {e}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
